@@ -43,16 +43,18 @@ public class CourseManager {
     }
 
     public boolean enrollStudentInCourse(Student student, String courseId, int credits) {
-        if (ifOpen == false) {
-            return false;
-        }
         boolean result = false;
+        boolean ifTheCourseExist = false;
         int whichCourse = 0;
         for (int i = 0; i < this.courses.size(); i++) {
             if (courseId.equals(this.courses.get(i).getCourseID())) {
                 whichCourse = i;
+                ifTheCourseExist = true;
                 break;
             }
+        }
+        if (ifOpen == false||ifTheCourseExist==false) {
+            return false;
         }
         Course theCourse = this.courses.get(whichCourse);
         boolean ifEnrolled = false;
@@ -61,7 +63,7 @@ public class CourseManager {
                 ifEnrolled = true;
             }
         }
-        if (ifOpen && credits > 0 && credits <= student.getCredits() && !ifEnrolled) {
+        if (ifTheCourseExist && credits > 0 && credits <= student.getCredits() && !ifEnrolled) {
             result = true;
             student.getEnrollCourses().add(theCourse);
             theCourse.getEnrollStudent().add(student);
@@ -72,17 +74,20 @@ public class CourseManager {
     }
 
     public boolean modifyStudentEnrollmentCredits(Student student, String courseId, int credits) {
-        if (ifOpen == false) {
-            return false;
-        }
         boolean result = false;
+        boolean ifTheCourseExist = false;
         int whichCourse = 0;
         for (int i = 0; i < this.courses.size(); i++) {
             if (courseId.equals(this.courses.get(i).getCourseID())) {
                 whichCourse = i;
+                ifTheCourseExist = true;
                 break;
             }
         }
+        if (ifOpen == false||ifTheCourseExist==false) {
+            return false;
+        }
+
         Course theCourse = this.courses.get(whichCourse);
         int lastCredits = 0;
         int index = 0;
@@ -98,7 +103,7 @@ public class CourseManager {
                 ifEnrolled = true;
             }
         }
-        if (ifOpen && credits > 0 && credits <= student.getCredits() + lastCredits && ifEnrolled) {
+        if (ifTheCourseExist && credits > 0 && credits <= student.getCredits() + lastCredits && ifEnrolled) {
             result = true;
             student.setCredits(student.getCredits() + lastCredits - credits);
             theCourse.getCredits().set(index, credits);
@@ -107,16 +112,18 @@ public class CourseManager {
     }
 
     public boolean dropStudentEnrollmentCourse(Student student, String courseId) {
-        if (ifOpen == false) {
-            return false;
-        }
         boolean result = false;
+        boolean ifTheCourseExist = false;
         int whichCourse = 0;
         for (int i = 0; i < this.courses.size(); i++) {
             if (courseId.equals(this.courses.get(i).getCourseID())) {
                 whichCourse = i;
+                ifTheCourseExist = true;
                 break;
             }
+        }
+        if (ifOpen == false||ifTheCourseExist==false) {
+            return false;
         }
         Course theCourse = this.courses.get(whichCourse);
         int lastCredits = 0;
@@ -133,7 +140,7 @@ public class CourseManager {
                 ifEnrolled = true;
             }
         }
-        if (ifOpen && ifEnrolled) {
+        if (ifTheCourseExist && ifEnrolled) {
             result = true;
             student.setCredits(student.getCredits() + lastCredits);
             theCourse.getCredits().set(index, 0);
@@ -166,9 +173,9 @@ public class CourseManager {
                 }
             }
             if (theCourse.getSuccessStudents().size() > theCourse.getMaxCapacity()) {
-                int size=theCourse.getCredits().size();
+                int size = theCourse.getCredits().size();
                 for (int j = 0; j < size; j++) {
-                    if (theCourse.getCredits().get(j) == credits.get(theCourse.getMaxCapacity()-1)) {
+                    if (theCourse.getCredits().get(j) == credits.get(theCourse.getMaxCapacity() - 1)) {
                         theCourse.getSuccessStudents().remove(theCourse.getEnrollStudent().get(j));
                     }
                 }

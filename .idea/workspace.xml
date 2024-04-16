@@ -4,22 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6b2b22-769d-4726-9d94-b52f5b8f8509" name="Changes" comment="error commit and try reset">
-      <change afterPath="$PROJECT_DIR$/Homework/src/Week08/CourseManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homework/src/Week08/CourseManagerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LabClass/src/Week09/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LabClass/src/Week09/BookStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LabClass/src/Week09/BookTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homework/Homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/Homework.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabClass/src/Week08/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabClass/src/Week08/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LabClass/src/Week08/CircleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabClass/src/Week08/CircleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Practice/src/StringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Practice/src/StringTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Homework/Homework.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Homework/Week06/OJ01.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Homework/Week06/OJ01.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabClass/Week08/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabClass/Week08/Circle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LabClass/Week08/CircleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabClass/Week08/CircleTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Practice/StringTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Practice/StringTest.class" afterDir="false" />
+    <list default="true" id="ea6b2b22-769d-4726-9d94-b52f5b8f8509" name="Changes" comment="@RuiZhe Pang&#10;First attempt to submit the Week08 OJ and gain 80 scores.">
+      <change beforePath="$PROJECT_DIR$/Homework/src/Week08/CourseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/src/Week08/CourseManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,12 +184,21 @@
       <option name="project" value="LOCAL" />
       <updated>1712646750073</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="@RuiZhe Pang&#10;First attempt to submit the Week08 OJ and gain 80 scores.">
+      <option name="closed" value="true" />
+      <created>1713251983849</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713251983849</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="This is the first commit at week07" />
-    <option name="LAST_COMMIT_MESSAGE" value="This is the first commit at week07" />
+    <MESSAGE value="@RuiZhe Pang&#10;First attempt to submit the Week08 OJ and gain 80 scores." />
+    <option name="LAST_COMMIT_MESSAGE" value="@RuiZhe Pang&#10;First attempt to submit the Week08 OJ and gain 80 scores." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
