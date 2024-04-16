@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6b2b22-769d-4726-9d94-b52f5b8f8509" name="Changes" comment="This is the first commit at week07">
-      <change afterPath="$PROJECT_DIR$/Homework/src/Week06/OJ03New.java" afterDir="false" />
+    <list default="true" id="ea6b2b22-769d-4726-9d94-b52f5b8f8509" name="Changes" comment="error commit and try reset">
+      <change afterPath="$PROJECT_DIR$/Homework/src/Week08/CourseManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homework/src/Week08/CourseManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LabClass/src/Week09/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LabClass/src/Week09/BookStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LabClass/src/Week09/BookTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework/Homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/Homework.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LabClass/src/Week08/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabClass/src/Week08/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LabClass/src/Week08/CircleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/LabClass/src/Week08/CircleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practice/src/StringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Practice/src/StringTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Homework/Homework.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Homework/Week06/OJ01.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Homework/Week06/OJ01.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LabClass/Week08/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabClass/Week08/Circle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LabClass/Week08/CircleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LabClass/Week08/CircleTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Practice/StringTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Practice/StringTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,12 +29,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -39,7 +54,22 @@
   "keyToString": {
     "Application.CS104.executor": "Run",
     "Application.CircleTest.executor": "Run",
+    "Application.OJ03New.executor": "Run",
+    "Application.OJ333.executor": "Run",
     "Application.StringTest.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.CourseManagerTest.executor": "Run",
+    "JUnit.CourseManagerTest.test20.executor": "Run",
+    "JUnit.CourseManagerTest.testBiddingMoreCanChangeEnrollments.executor": "Run",
+    "JUnit.CourseManagerTest.testCanBidOnFullCourse.executor": "Run",
+    "JUnit.CourseManagerTest.testCanDecreaseEnrolledCourseBidCredits.executor": "Run",
+    "JUnit.CourseManagerTest.testEnrollModifyCreditsAndDropCourses.executor": "Run",
+    "JUnit.CourseManagerTest.testFinalEnrollmentListAndStudentCredits.executor": "Run",
+    "JUnit.CourseManagerTest.testOperationsAfterClose.executor": "Debug",
+    "JUnit.CourseManagerTest.testStudentCoursesWithScoresAfterChanges.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "jdk.selected.JAVA_MODULE": "17",
@@ -55,20 +85,7 @@
       <recent name="E:\CS109" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CircleTest">
-    <configuration name="CircleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Week08.CircleTest" />
-      <module name="LabClass" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Week08.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.CourseManagerTest">
     <configuration name="StringTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="StringTest" />
       <module name="Practice" />
@@ -76,10 +93,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CourseManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Week08.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Week08" />
+      <option name="MAIN_CLASS_NAME" value="Week08.CourseManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourseManagerTest.test20" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Week08.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Week08" />
+      <option name="MAIN_CLASS_NAME" value="Week08.CourseManagerTest" />
+      <option name="METHOD_NAME" value="test20" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourseManagerTest.testOperationsAfterClose" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Week08.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Week08" />
+      <option name="MAIN_CLASS_NAME" value="Week08.CourseManagerTest" />
+      <option name="METHOD_NAME" value="testOperationsAfterClose" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourseManagerTest.testStudentCoursesWithScoresAfterChanges" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Week08.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Week08" />
+      <option name="MAIN_CLASS_NAME" value="Week08.CourseManagerTest" />
+      <option name="METHOD_NAME" value="testStudentCoursesWithScoresAfterChanges" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CircleTest" />
+        <item itemvalue="JUnit.CourseManagerTest" />
+        <item itemvalue="JUnit.CourseManagerTest.test20" />
+        <item itemvalue="JUnit.CourseManagerTest.testStudentCoursesWithScoresAfterChanges" />
         <item itemvalue="Application.StringTest" />
+        <item itemvalue="JUnit.CourseManagerTest.testOperationsAfterClose" />
       </list>
     </recent_temporary>
   </component>
@@ -121,5 +204,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="This is the first commit at week07" />
     <option name="LAST_COMMIT_MESSAGE" value="This is the first commit at week07" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Homework/src/Week08/CourseManagerTest.java</url>
+          <line>232</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

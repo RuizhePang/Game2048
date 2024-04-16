@@ -1,5 +1,6 @@
 package Week08;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Circle {
@@ -8,6 +9,7 @@ public class Circle {
     private int y;
     private int id;
     private static int count = 0;
+    private ArrayList<String> strings;
 
     public Circle() {
         this.id = ++count;
@@ -27,6 +29,13 @@ public class Circle {
             radius = sc.nextDouble();
         } while (radius < 0);*/
         this.radius = radius;
+    }
+
+    public ArrayList<String> getStrings() {
+        return strings;
+    }
+    public void setStrings(ArrayList<String> strings){
+        this.strings=strings;
     }
 
     public void setX(int x) {
