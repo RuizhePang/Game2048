@@ -180,37 +180,37 @@ public class CourseManager {
 
     public void finalizeEnrollments() {
         this.ifOpen = false;
-        for (int i = 0; i < this.courses.size(); i++) {
-            Course theCourse = this.courses.get(i);
-            ArrayList<Integer> credits = new ArrayList<>();
-            credits.addAll(theCourse.getCredits());
-            Collections.sort(credits, Collections.reverseOrder());
+
+
+        for (Course theCourse : this.courses) {
             if (theCourse.getCredits().size() < theCourse.getMaxCapacity()) {
-                int size = theCourse.getCredits().size();
-                for (int j = 0; j <= theCourse.getMaxCapacity() - size; j++) {
-                    theCourse.getCredits().add(-1);
-                    credits.add(-1);
-                }
-            }
-            for (int j = 0; j < theCourse.getMaxCapacity(); j++) {
-                for (int k = 0; k < theCourse.getCredits().size(); k++) {
-                    if (theCourse.getCredits().get(k) == credits.get(j) && theCourse.getCredits().get(k) != 0 && theCourse.getCredits().get(k) != -1) {
-                        theCourse.getSuccessStudents().add(theCourse.getEnrollStudent().get(k));
-                        theCourse.getEnrollStudent().get(k).getSuccessCourses().add(theCourse);
+                for (int i = 0; i < theCourse.getCredits().size(); i++) {
+                    if (theCourse.getCredits().get(i) != 0) {
+                        Student successStudent = theCourse.getEnrollStudent().get(i);
+                        theCourse.getSuccessStudents().add(successStudent);
+                        successStudent.getSuccessCourses().add(theCourse);
                     }
                 }
-            }
-            if (theCourse.getSuccessStudents().size() > theCourse.getMaxCapacity()) {
-                int size = theCourse.getCredits().size();
-                for (int j = 0; j < size; j++) {
-                    if (theCourse.getCredits().get(j) == credits.get(theCourse.getMaxCapacity() - 1)) {
-                        theCourse.getSuccessStudents().remove(theCourse.getEnrollStudent().get(j));
+            } else {
+                ArrayList<Integer> credits = new ArrayList<>(theCourse.getCredits());
+                credits.sort(Collections.reverseOrder());
+                int passCredits = credits.get(theCourse.getMaxCapacity() - 1);
+                int passStudents = 0;
+                for (int i = 0; i < theCourse.getCredits().size(); i++) {
+                    if (theCourse.getCredits().get(i) >= passCredits) {
+                        passStudents++;
                     }
                 }
-            }
-            int size = theCourse.getCredits().size();
-            for (int j = 0; j < size; j++) {
-                theCourse.getCredits().remove(Integer.valueOf(-1));
+                if (passStudents > theCourse.getMaxCapacity()) {
+                    passCredits++;
+                }
+                for (int i = 0; i < theCourse.getCredits().size(); i++) {
+                    if (theCourse.getCredits().get(i) >= passCredits && theCourse.getCredits().get(i) != 0) {
+                        Student successStudent = theCourse.getEnrollStudent().get(i);
+                        theCourse.getSuccessStudents().add(successStudent);
+                        successStudent.getSuccessCourses().add(theCourse);
+                    }
+                }
             }
         }
     }

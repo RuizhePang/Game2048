@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6b2b22-769d-4726-9d94-b52f5b8f8509" name="Changes" comment="@RuiZhe Pang&#10;Second attempt to submit the Week08 OJ and gain 85 scores.">
+    <list default="true" id="ea6b2b22-769d-4726-9d94-b52f5b8f8509" name="Changes" comment="@RuiZhe Pang&#10;Make the code more elegant.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework/src/Week08/CourseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/src/Week08/CourseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homework/src/Week08/CourseManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/src/Week08/CourseManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,35 +40,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CS104.executor": "Run",
-    "Application.CircleTest.executor": "Run",
-    "Application.OJ03New.executor": "Run",
-    "Application.OJ333.executor": "Run",
-    "Application.StringTest.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.CourseManagerTest.executor": "Run",
-    "JUnit.CourseManagerTest.test20.executor": "Debug",
-    "JUnit.CourseManagerTest.test21.executor": "Run",
-    "JUnit.CourseManagerTest.testBiddingMoreCanChangeEnrollments.executor": "Run",
-    "JUnit.CourseManagerTest.testCanBidOnFullCourse.executor": "Run",
-    "JUnit.CourseManagerTest.testCanDecreaseEnrolledCourseBidCredits.executor": "Run",
-    "JUnit.CourseManagerTest.testEnrollModifyCreditsAndDropCourses.executor": "Run",
-    "JUnit.CourseManagerTest.testFinalEnrollmentListAndStudentCredits.executor": "Run",
-    "JUnit.CourseManagerTest.testOperationsAfterClose.executor": "Debug",
-    "JUnit.CourseManagerTest.testStudentCoursesWithScoresAfterChanges.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "jdk.selected.JAVA_MODULE": "17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/CS109_Project",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CS104.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CircleTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OJ03New.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OJ333.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StringTest.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.CourseManagerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CourseManagerTest.test20.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.CourseManagerTest.test21.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CourseManagerTest.testBiddingMoreCanChangeEnrollments.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CourseManagerTest.testCanBidOnFullCourse.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CourseManagerTest.testCanDecreaseEnrolledCourseBidCredits.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CourseManagerTest.testEnrollModifyCreditsAndDropCourses.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CourseManagerTest.testFinalEnrollmentListAndStudentCredits.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CourseManagerTest.testOperationsAfterClose.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.CourseManagerTest.testStudentCoursesWithScoresAfterChanges.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/CS109_Project&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\CS109\Practice" />
@@ -207,12 +206,21 @@
       <option name="project" value="LOCAL" />
       <updated>1713251983849</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="@RuiZhe Pang&#10;Make the code more elegant.">
+      <option name="closed" value="true" />
+      <created>1713329059515</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713329059515</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="This is the first commit at week07" />
     <MESSAGE value="@RuiZhe Pang&#10;First attempt to submit the Week08 OJ and gain 80 scores." />
-    <option name="LAST_COMMIT_MESSAGE" value="@RuiZhe Pang&#10;First attempt to submit the Week08 OJ and gain 80 scores." />
+    <MESSAGE value="@RuiZhe Pang&#10;Make the code more elegant." />
+    <option name="LAST_COMMIT_MESSAGE" value="@RuiZhe Pang&#10;Make the code more elegant." />
   </component>
 </project>
