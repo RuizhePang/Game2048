@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6b2b22-769d-4726-9d94-b52f5b8f8509" name="Changes" comment="@RuiZhe Pang&#10;First attempt to submit the Week08 OJ and gain 80 scores.">
+    <list default="true" id="ea6b2b22-769d-4726-9d94-b52f5b8f8509" name="Changes" comment="@RuiZhe Pang&#10;Second attempt to submit the Week08 OJ and gain 85 scores.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Homework/src/Week08/CourseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/src/Week08/CourseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homework/src/Week08/CourseManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/src/Week08/CourseManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +25,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -45,7 +50,8 @@
     "Application.StringTest.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.CourseManagerTest.executor": "Run",
-    "JUnit.CourseManagerTest.test20.executor": "Run",
+    "JUnit.CourseManagerTest.test20.executor": "Debug",
+    "JUnit.CourseManagerTest.test21.executor": "Run",
     "JUnit.CourseManagerTest.testBiddingMoreCanChangeEnrollments.executor": "Run",
     "JUnit.CourseManagerTest.testCanBidOnFullCourse.executor": "Run",
     "JUnit.CourseManagerTest.testCanDecreaseEnrolledCourseBidCredits.executor": "Run",
@@ -60,7 +66,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/CS109",
+    "last_opened_file_path": "E:/CS109_Project",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
@@ -72,13 +78,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.CourseManagerTest">
-    <configuration name="StringTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="StringTest" />
-      <module name="Practice" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CourseManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <extension name="coverage">
@@ -110,7 +109,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CourseManagerTest.testOperationsAfterClose" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CourseManagerTest.test21" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <extension name="coverage">
         <pattern>
@@ -120,7 +119,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="Week08" />
       <option name="MAIN_CLASS_NAME" value="Week08.CourseManagerTest" />
-      <option name="METHOD_NAME" value="testOperationsAfterClose" />
+      <option name="METHOD_NAME" value="test21" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourseManagerTest.testCanBidOnFullCourse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Week08.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Week08" />
+      <option name="MAIN_CLASS_NAME" value="Week08.CourseManagerTest" />
+      <option name="METHOD_NAME" value="testCanBidOnFullCourse" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -145,10 +160,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CourseManagerTest" />
+        <item itemvalue="JUnit.CourseManagerTest.test21" />
         <item itemvalue="JUnit.CourseManagerTest.test20" />
+        <item itemvalue="JUnit.CourseManagerTest.testCanBidOnFullCourse" />
         <item itemvalue="JUnit.CourseManagerTest.testStudentCoursesWithScoresAfterChanges" />
-        <item itemvalue="Application.StringTest" />
-        <item itemvalue="JUnit.CourseManagerTest.testOperationsAfterClose" />
       </list>
     </recent_temporary>
   </component>
@@ -199,16 +214,5 @@
     <MESSAGE value="This is the first commit at week07" />
     <MESSAGE value="@RuiZhe Pang&#10;First attempt to submit the Week08 OJ and gain 80 scores." />
     <option name="LAST_COMMIT_MESSAGE" value="@RuiZhe Pang&#10;First attempt to submit the Week08 OJ and gain 80 scores." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Homework/src/Week08/CourseManagerTest.java</url>
-          <line>232</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

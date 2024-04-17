@@ -241,6 +241,20 @@ class CourseManagerTest {
         assertFalse(course1.getSuccessStudents().contains(student2));
         assertFalse(course1.getSuccessStudents().contains(student3));
     }
+    @Test
+    void test21(){
+        student1.enrollCourse("c001",30);
+        assertFalse(student1.enrollCourse("c001",20));
+        assertFalse(student3.dropEnrollCourse("c002"));
+        //student3.enrollCourse("c002",30);
+        courseManager.finalizeEnrollments();
+//        assertFalse(course1.getSuccessStudents().contains(student2));
+//        assertTrue(course1.getSuccessStudents().contains(student3));
+//        assertTrue(course1.getSuccessStudents().contains(student1));
+//        assertTrue(course2.getSuccessStudents().contains(student1));
+//        assertFalse(course2.getSuccessStudents().contains(student2));
+//        assertFalse(course2.getSuccessStudents().contains(student3));
+    }
 }
 
 class Course {

@@ -43,7 +43,9 @@ public class CourseManager {
     }
 
     public boolean enrollStudentInCourse(Student student, String courseId, int credits) {
-        boolean result = false;
+        boolean ifValid = false;
+
+
         boolean ifTheCourseExist = false;
         int whichCourse = 0;
         for (int i = 0; i < this.courses.size(); i++) {
@@ -53,28 +55,38 @@ public class CourseManager {
                 break;
             }
         }
-        if (ifOpen == false||ifTheCourseExist==false) {
-            return false;
-        }
         Course theCourse = this.courses.get(whichCourse);
+
+
         boolean ifEnrolled = false;
         for (int i = 0; i < theCourse.getEnrollStudent().size() && !ifEnrolled; i++) {
             if (student == theCourse.getEnrollStudent().get(i)) {
                 ifEnrolled = true;
             }
         }
-        if (ifTheCourseExist && credits > 0 && credits <= student.getCredits() && !ifEnrolled) {
-            result = true;
-            student.getEnrollCourses().add(theCourse);
-            theCourse.getEnrollStudent().add(student);
-            theCourse.getCredits().add(credits);
-            student.setCredits(student.getCredits() - credits);
+
+        boolean ifCreditsValid = credits > 0 && credits <= student.getCredits();
+
+
+        ifValid = ifOpen && ifTheCourseExist && !ifEnrolled && ifCreditsValid;
+        if (!ifValid) {
+            return false;
         }
-        return result;
+
+
+        student.getEnrollCourses().add(theCourse);
+        student.setCredits(student.getCredits() - credits);
+        theCourse.getEnrollStudent().add(student);
+        theCourse.getCredits().add(credits);
+
+
+        return true;
     }
 
     public boolean modifyStudentEnrollmentCredits(Student student, String courseId, int credits) {
-        boolean result = false;
+        boolean ifValid = false;
+
+
         boolean ifTheCourseExist = false;
         int whichCourse = 0;
         for (int i = 0; i < this.courses.size(); i++) {
@@ -84,11 +96,17 @@ public class CourseManager {
                 break;
             }
         }
-        if (ifOpen == false||ifTheCourseExist==false) {
-            return false;
+        Course theCourse = this.courses.get(whichCourse);
+
+
+        boolean ifEnrolled = false;
+        for (int i = 0; i < theCourse.getEnrollStudent().size() && !ifEnrolled; i++) {
+            if (student == theCourse.getEnrollStudent().get(i)) {
+                ifEnrolled = true;
+            }
         }
 
-        Course theCourse = this.courses.get(whichCourse);
+
         int lastCredits = 0;
         int index = 0;
         for (int i = 0; i < theCourse.getCredits().size(); i++) {
@@ -97,22 +115,28 @@ public class CourseManager {
                 index = i;
             }
         }
-        boolean ifEnrolled = false;
-        for (int i = 0; i < theCourse.getEnrollStudent().size() && !ifEnrolled; i++) {
-            if (student == theCourse.getEnrollStudent().get(i)) {
-                ifEnrolled = true;
-            }
+
+
+        boolean ifCreditsValid = credits > 0 && credits <= student.getCredits() + lastCredits;
+
+
+        ifValid = ifOpen && ifTheCourseExist && ifEnrolled && ifCreditsValid;
+        if (!ifValid) {
+            return false;
         }
-        if (ifTheCourseExist && credits > 0 && credits <= student.getCredits() + lastCredits && ifEnrolled) {
-            result = true;
-            student.setCredits(student.getCredits() + lastCredits - credits);
-            theCourse.getCredits().set(index, credits);
-        }
-        return result;
+
+
+        student.setCredits(student.getCredits() + lastCredits - credits);
+        theCourse.getCredits().set(index, credits);
+
+
+        return true;
     }
 
     public boolean dropStudentEnrollmentCourse(Student student, String courseId) {
-        boolean result = false;
+        boolean ifValid = false;
+
+
         boolean ifTheCourseExist = false;
         int whichCourse = 0;
         for (int i = 0; i < this.courses.size(); i++) {
@@ -122,10 +146,22 @@ public class CourseManager {
                 break;
             }
         }
-        if (ifOpen == false||ifTheCourseExist==false) {
+        Course theCourse = this.courses.get(whichCourse);
+
+
+        boolean ifEnrolled = false;
+        for (int i = 0; i < theCourse.getEnrollStudent().size() && !ifEnrolled; i++) {
+            if (student == theCourse.getEnrollStudent().get(i)) {
+                ifEnrolled = true;
+            }
+        }
+
+        ifValid = ifOpen && ifTheCourseExist && ifEnrolled;
+        if (!ifValid) {
             return false;
         }
-        Course theCourse = this.courses.get(whichCourse);
+
+
         int lastCredits = 0;
         int index = 0;
         for (int i = 0; i < theCourse.getCredits().size(); i++) {
@@ -134,20 +170,12 @@ public class CourseManager {
                 index = i;
             }
         }
-        boolean ifEnrolled = false;
-        for (int i = 0; i < theCourse.getEnrollStudent().size() && !ifEnrolled; i++) {
-            if (student == theCourse.getEnrollStudent().get(i)) {
-                ifEnrolled = true;
-            }
-        }
-        if (ifTheCourseExist && ifEnrolled) {
-            result = true;
-            student.setCredits(student.getCredits() + lastCredits);
-            theCourse.getCredits().set(index, 0);
-            theCourse.getEnrollStudent().set(index, null);
-            student.getEnrollCourses().remove(theCourse);
-        }
-        return result;
+
+        student.setCredits(student.getCredits() + lastCredits);
+        theCourse.getCredits().set(index, 0);
+        theCourse.getEnrollStudent().set(index, null);
+        student.getEnrollCourses().remove(theCourse);
+        return true;
     }
 
     public void finalizeEnrollments() {
@@ -160,13 +188,13 @@ public class CourseManager {
             if (theCourse.getCredits().size() < theCourse.getMaxCapacity()) {
                 int size = theCourse.getCredits().size();
                 for (int j = 0; j <= theCourse.getMaxCapacity() - size; j++) {
-                    theCourse.getCredits().add(0);
-                    credits.add(0);
+                    theCourse.getCredits().add(-1);
+                    credits.add(-1);
                 }
             }
             for (int j = 0; j < theCourse.getMaxCapacity(); j++) {
                 for (int k = 0; k < theCourse.getCredits().size(); k++) {
-                    if (theCourse.getCredits().get(k) == credits.get(j) && theCourse.getCredits().get(k) != 0) {
+                    if (theCourse.getCredits().get(k) == credits.get(j) && theCourse.getCredits().get(k) != 0 && theCourse.getCredits().get(k) != -1) {
                         theCourse.getSuccessStudents().add(theCourse.getEnrollStudent().get(k));
                         theCourse.getEnrollStudent().get(k).getSuccessCourses().add(theCourse);
                     }
@@ -179,6 +207,10 @@ public class CourseManager {
                         theCourse.getSuccessStudents().remove(theCourse.getEnrollStudent().get(j));
                     }
                 }
+            }
+            int size = theCourse.getCredits().size();
+            for (int j = 0; j < size; j++) {
+                theCourse.getCredits().remove(Integer.valueOf(-1));
             }
         }
     }
@@ -212,5 +244,4 @@ public class CourseManager {
         }
         return credit;
     }
-
 }
