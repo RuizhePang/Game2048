@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea6b2b22-769d-4726-9d94-b52f5b8f8509" name="Changes" comment="@RuiZhe Pang&#10;Make the code more elegant.">
+    <list default="true" id="ea6b2b22-769d-4726-9d94-b52f5b8f8509" name="Changes" comment="@RuiZhe Pang&#10;Revise the finalizeEnrollments part and finally get 100 scores on OJ.">
+      <change afterPath="$PROJECT_DIR$/Homework/src/Week10/A5LocalTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homework/src/Week10/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homework/src/Week10/Direction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homework/src/Week10/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homework/src/Week10/RightTriangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homework/src/Week10/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homework/src/Week10/StdDraw.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Homework/src/Week10/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LabClass/src/Week10/CircleColor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LabClass/src/Week10/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LabClass/src/Week10/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LabClass/src/Week10/ShapeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LabClass/src/Week10/StdDraw.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homework/src/Week08/CourseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homework/src/Week08/CourseManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,12 +37,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Homework/src/Week10/Shape.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 0
+  &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2eqFvpe38wQbL79GwWv8DXYO48Q" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -40,43 +54,90 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CS104.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CircleTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.OJ03New.executor&quot;: &quot;Run&quot;,
-    &quot;Application.OJ333.executor&quot;: &quot;Run&quot;,
-    &quot;Application.StringTest.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.CourseManagerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CourseManagerTest.test20.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.CourseManagerTest.test21.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CourseManagerTest.testBiddingMoreCanChangeEnrollments.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CourseManagerTest.testCanBidOnFullCourse.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CourseManagerTest.testCanDecreaseEnrolledCourseBidCredits.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CourseManagerTest.testEnrollModifyCreditsAndDropCourses.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CourseManagerTest.testFinalEnrollmentListAndStudentCredits.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CourseManagerTest.testOperationsAfterClose.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.CourseManagerTest.testStudentCoursesWithScoresAfterChanges.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/CS109_Project&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CS104.executor": "Run",
+    "Application.CircleTest.executor": "Run",
+    "Application.OJ03New.executor": "Run",
+    "Application.OJ333.executor": "Run",
+    "Application.ShapeTest.executor": "Run",
+    "Application.StringTest.executor": "Run",
+    "Application.Test.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.A5LocalTest.executor": "Run",
+    "JUnit.CourseManagerTest.executor": "Run",
+    "JUnit.CourseManagerTest.test20.executor": "Debug",
+    "JUnit.CourseManagerTest.test21.executor": "Run",
+    "JUnit.CourseManagerTest.testBiddingMoreCanChangeEnrollments.executor": "Run",
+    "JUnit.CourseManagerTest.testCanBidOnFullCourse.executor": "Run",
+    "JUnit.CourseManagerTest.testCanDecreaseEnrolledCourseBidCredits.executor": "Run",
+    "JUnit.CourseManagerTest.testEnrollModifyCreditsAndDropCourses.executor": "Run",
+    "JUnit.CourseManagerTest.testFinalEnrollmentListAndStudentCredits.executor": "Run",
+    "JUnit.CourseManagerTest.testOperationsAfterClose.executor": "Debug",
+    "JUnit.CourseManagerTest.testStudentCoursesWithScoresAfterChanges.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/CS109_Project",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\CS109\Homework\src\Week10" />
+      <recent name="E:\CS109\LabClass\src\Week10" />
       <recent name="E:\CS109\Practice" />
       <recent name="E:\CS109\out" />
       <recent name="E:\CS109" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CourseManagerTest">
+  <component name="RunManager" selected="JUnit.A5LocalTest">
+    <configuration name="ShapeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Week10.ShapeTest" />
+      <module name="LabClass" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Week10.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Week10.Test" />
+      <module name="Homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Week10.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="A5LocalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Week10.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Week10" />
+      <option name="MAIN_CLASS_NAME" value="Week10.A5LocalTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CourseManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homework" />
       <extension name="coverage">
@@ -88,22 +149,6 @@
       <option name="PACKAGE_NAME" value="Week08" />
       <option name="MAIN_CLASS_NAME" value="Week08.CourseManagerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CourseManagerTest.test20" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Homework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Week08.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Week08" />
-      <option name="MAIN_CLASS_NAME" value="Week08.CourseManagerTest" />
-      <option name="METHOD_NAME" value="test20" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -124,45 +169,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CourseManagerTest.testCanBidOnFullCourse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Homework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Week08.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Week08" />
-      <option name="MAIN_CLASS_NAME" value="Week08.CourseManagerTest" />
-      <option name="METHOD_NAME" value="testCanBidOnFullCourse" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CourseManagerTest.testStudentCoursesWithScoresAfterChanges" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Homework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Week08.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Week08" />
-      <option name="MAIN_CLASS_NAME" value="Week08.CourseManagerTest" />
-      <option name="METHOD_NAME" value="testStudentCoursesWithScoresAfterChanges" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.A5LocalTest" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.ShapeTest" />
         <item itemvalue="JUnit.CourseManagerTest" />
         <item itemvalue="JUnit.CourseManagerTest.test21" />
-        <item itemvalue="JUnit.CourseManagerTest.test20" />
-        <item itemvalue="JUnit.CourseManagerTest.testCanBidOnFullCourse" />
-        <item itemvalue="JUnit.CourseManagerTest.testStudentCoursesWithScoresAfterChanges" />
       </list>
     </recent_temporary>
   </component>
@@ -214,13 +227,22 @@
       <option name="project" value="LOCAL" />
       <updated>1713329059515</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="@RuiZhe Pang&#10;Revise the finalizeEnrollments part and finally get 100 scores on OJ.">
+      <option name="closed" value="true" />
+      <created>1713330836186</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713330836186</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="This is the first commit at week07" />
     <MESSAGE value="@RuiZhe Pang&#10;First attempt to submit the Week08 OJ and gain 80 scores." />
     <MESSAGE value="@RuiZhe Pang&#10;Make the code more elegant." />
-    <option name="LAST_COMMIT_MESSAGE" value="@RuiZhe Pang&#10;Make the code more elegant." />
+    <MESSAGE value="@RuiZhe Pang&#10;Revise the finalizeEnrollments part and finally get 100 scores on OJ." />
+    <option name="LAST_COMMIT_MESSAGE" value="@RuiZhe Pang&#10;Revise the finalizeEnrollments part and finally get 100 scores on OJ." />
   </component>
 </project>
