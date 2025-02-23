@@ -1,0 +1,40 @@
+# Java bytecode files
+*.class
+
+# Log files
+*.log
+
+# Maven / Gradle directories
+target/
+build/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# NetBeans
+nbproject/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Generated files
+*.war
+*.jar
+*.ear
+*.zip
+*.tar.gz
+
+# Gradle
+.gradle/
+build/
+
+# Maven
+.mvn/
+!**/src/main/resources/
